@@ -138,18 +138,18 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                    <form>
+                    <form name="contact-from">
                         <div class="mb-3">
                             <label for="name" class="form-label">Nama Lengkap</label>
-                            <input type="text" class="form-control" id="name" aria-describedby="name">
+                            <input type="text" class="form-control" id="name" aria-describedby="name" name="nama">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="email" aria-describedby="email">
+                            <input type="email" class="form-control" id="email" aria-describedby="email" name="email">
                         </div>
                         <div class="mb-3">
                             <label for="pesan" class="form-label">Pesan</label>
-                            <textarea class="form-control" id="pesan" rows="5"></textarea>
+                            <textarea class="form-control" id="pesan" rows="5" name="pesan"></textarea>
                         </div>
                         <button type="submit" class="btn btn-danger">Kirim</button>
                     </form>
@@ -178,6 +178,17 @@
         <!-- My CSS -->
         <link rel="stylesheet" href="style.css">
     
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzyC4R-19F-crpw9czdLOX4UmIKJ8nH2yU7n0BaEbcUx3jGJXuFTR6Z7ysRjJdCskgUYg/exec'
+            const form = document.forms['contact-from']
+
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => console.log('Success!', response))
+                    .catch(error => console.error('Error!', error.message))
+            })
+        </script>
 </body>
 
 </html>
