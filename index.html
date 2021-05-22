@@ -9,8 +9,12 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-<!--Icon Bootstrap-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!--AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!--Icon Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
     <title>My Portfolio | Rizqi Nur Rifai</title>
 </head>
@@ -47,7 +51,7 @@
 
     <!-- Jumbotron -->
 <section class="jumbotron jumbotron-fluid text-center">
-    <img src="img/QQ.jpg" alt="RIZQI NUR RIFA'I" width="200" class="rounded-circle img-thumbnail" >
+    <img src="img/QQ.jpg" alt="RIZQI NUR RIFA'I" width="200" class="rounded-circle img-thumbnail"  >
     <div class="container">
         <h1 class="display-4 fw-bold">Rizqi Nur Rifa'i</h1>
         <p class="lead">Programmer | IT | Entrepreneur</p>
@@ -62,7 +66,7 @@
 
     <!-- About -->
     <section id="about">
-        <div class="container">
+        <div class="container" data-aos="zoom-out-up">
             <div class="row text-center md-4 mb-3 fw-bold">
                 <div class="col">
                     <h2>About Me</h2>
@@ -84,7 +88,7 @@
 
     <!-- Projects -->
     <section id="projects">
-        <div class="container">
+        <div class="container" data-aos="zoom-in-down">
             <div class="row text-center mb-3">
                 <div class="col">
                     <h2>My Projects</h2>
@@ -130,7 +134,7 @@
 
     <!--Contact-->
     <section id="contact">
-        <div class="container">
+        <div class="container" data-aos="fade-up" data-aos-duration="3000">
             <div class="row text-center mb-3">
                 <div class="col">
                     <h2>Contact Me</h2>
@@ -186,6 +190,7 @@
         <!-- My CSS -->
         <link rel="stylesheet" href="style.css">
     
+        <!--Contact Form-->
         <script>
             const scriptURL = 'https://script.google.com/macros/s/AKfycbzyC4R-19F-crpw9czdLOX4UmIKJ8nH2yU7n0BaEbcUx3jGJXuFTR6Z7ysRjJdCskgUYg/exec'
             const form = document.forms['contact-form']
@@ -213,6 +218,13 @@
                     .catch(error => console.error('Error!', error.message))
             })
         </script>
+
+        <!---Scrip AOS-->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
 </body>
 
 </html>
